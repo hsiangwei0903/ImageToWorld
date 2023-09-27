@@ -102,7 +102,7 @@ if __name__ == "__main__":
     assert len(image_coordinates_all) == len(world_coordinates_all), 'the length of image and world coordinate does not match.'
     assert len(ground_corners) == 4, f'length of ground corners should be four, instead got {len(ground_corners)}.'
     assert cv2.imread(args.img_path) is not None, f'image path {args.img_path} does not exists.'
-    assert len(image_coordinates_all) > args.remove_number, 'number of image coordinates should be bigger then number of remove sample'
+    assert len(image_coordinates_all) - args.remove_number >= 4, 'number of image coordinates - number of remove sample should be bigger then 4'
 
     n = args.trial_number
 
