@@ -9,7 +9,7 @@ pip install -r requirements.txt
 ```
 ## Data preparation
 Please modify the coordinate files in the coord folder. (1) image_coordinate.txt and world_coordinate.txt should contain corresponding matching 2D and 3D coordinates, at least four points need to be in each file in order to get the homography matrix. (2) ground_corners.txt should contain four world coordinates representing the bottom left, bottom right, upper right, and upper left of ground plane. 
-## To run the code:
+## To run the code
 To run the code without using any sampling from your annotated coordinates
 ```
 python main.py --img_path path/to/your/image.jpg --verbose --save_path output_image.jpg
