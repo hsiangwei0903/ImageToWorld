@@ -16,3 +16,5 @@ The ground_corners.txt should contain four world coordinates representing the bo
 To run the code without using any sampling from the selected points
 python main.py --img_path path/to/your/image.jpg --verbose --save_path output_image.jpg
 ```
+And you can get the visualization results.
+<img src="image/demo.jpg" width="650" />
