@@ -17,4 +17,4 @@ To run the code without using any sampling from the selected points
 python main.py --img_path path/to/your/image.jpg --verbose --save_path output_image.jpg
 ```
 And you can get the visualization results.  
-<img src="image/sample.jpg" width="650" />
+<img src="image/result.jpg" width="650" />
