@@ -6,11 +6,12 @@ from numpy.linalg import svd
 
 def make_parser():
     parser = argparse.ArgumentParser("Image to World Demo")
-    parser.add_argument("--img_path", type=str, default="image/demo_img.jpg", help="demo image path")
+    parser.add_argument("--img_path", type=str, default="image/sample.jpg", help="demo image path")
     parser.add_argument("--sample", type=bool, default=False)
     parser.add_argument("--trial_number", type=int, default=1, help='number of trials to run')
     parser.add_argument("--remove_number", type=int, default=0, help='number of remove sample for each trial')
     parser.add_argument("--verbose", type=bool, default=True, help='print homography matrix')
+    parser.add_argument("--save_path", type=str, default=None, help='output image path')
 
     return parser
 
@@ -127,3 +128,6 @@ if __name__ == "__main__":
         cv2.imshow(f'trial {trial_idx}. Ground Plane', image)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
+
+        if args.save_path:
+            cv2.imwrite(args.save_path,image)
